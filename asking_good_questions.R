@@ -146,6 +146,23 @@ min_dat %>%
 
 ## Hooray. Now you can paste this directly into the RStudio Community forum or any other website which accepts markdown markup. For Stack Overflow, instead of reprex::reprex(), use reprex::reprex(venue = "so").
 
+## *** Using one of the R datasets to create your reproducible example
+
+## Get a list of all the base R datasets
+
+help(package = datasets)
+
+## For more information on those datasets: https://github.com/vincentarelbundock/Rdatasets and look for the index
+## This will help you select a dataset with a structure suitable to replicate
+## your problem
+
+## A few examples:
+
+str(iris)
+str(mtcars)
+str(trees)
+str(airquality)
+
 ## *** Creating data from scratch
 
 ## You might want to simply create fake data instead of using bits of your actual data. Sometimes this is faster and simpler.
@@ -161,12 +178,12 @@ dat <- tibble(
 ## Let's make sure this reproduces our problem
 
 dat %>%
-  group_by(species) %>%
-  summarise(sum())
+      group_by(species) %>%
+      summarise(sum())
 
-## Good.
+    ## Good.
 
-## Exercise: write a reprex using this method of producing the data.
+    ## Exercise: write a reprex using this method of producing the data.
 
 library(tidyverse)
 
