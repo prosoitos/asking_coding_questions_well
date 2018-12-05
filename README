@@ -1,0 +1,42 @@
+#    -*- mode: org -*-
+
+#+OPTIONS: title:t date:t author:t email:t
+#+OPTIONS: toc:t h:6 num:nil |:t todo:nil
+#+OPTIONS: *:t -:t ::t <:t \n:t e:t creator:nil
+#+OPTIONS: f:t inline:t tasks:t tex:t timestamp:t
+#+OPTIONS: html-preamble:t html-postamble:t
+
+#+DATE:	  {{{time(%B %d\, %Y)}}}
+#+AUTHOR:  Marie-Hélène Burle
+#+EMAIL:   msb2@sfu.ca
+
+* You need help with your R code? No problem: ask online! But make sure you know how to ask...
+
+*** Description
+
+In order to have a positive experience in the active R online community and get answers to your questions, there are a number of things you absolutely have to know.
+
+ In this workshop, we will cover:
+
+- the various sites, their functioning, and their culture
+- how to properly ask for help
+- what *not* to do
+- how to make a reproducible example from your data
+- how to use the tidyverse package "reprex"
+- how to turn a sample of your data into a format that can be shared
+- how to use R datasets to illustrate your problem
+- how to create a toy example from scratch
+- how to anonymise your data
+- how to properly format your questions
+
+*** Target audience
+
+This workshop is open to current SFU students, staff, and faculty of all levels and will benefit anyone feeling a little confused in the R world or unsure where to find good R resources, how to ask for help with a reproducible example, and what to do when stuck.
+
+*** Requirements
+
+Participants need to bring a laptop with: the latest R release[fn:1] and the latest CRAN version of the package "tidyverse"[fn:2].
+
+[fn:1] Download R from https://cran.r-project.org/ and install it on your machine
+
+[fn:2] Install the tidyverse package by running install.packages("tidyverse") in R
