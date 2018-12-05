@@ -56,126 +56,19 @@ tbl %>%
 ## Uh oh... we also need to load the data...
 ## without the data, the code cannot be run.
 
-## ** How to provide data for a reprex
+## ** How to provide data for a reproducible example
 
-## *** Using dput()
+## *** Using deparse::deparsec()
 
-## Do not upload a .csv file nor a .rds object somewhere on the web to be downloaded. People hate downloading stuff and it is likely that you will not get help or be asked to produce a reprex instead...
-## On Stack Overflow, this might even cost you some downvotes
+## Do not upload a .csv file nor a .rds object somewhere on the web to be downloaded. People usually don't like downloading files and it is likely that you will not get help or be asked to produce a reproducible example...
+## On Stack Overflow, this might even cost you some downvotes.
 
-dput(tbl)
+deparse::deparsec(tbl)
 
-dat <- structure(
-  list(
-    date = structure(
-      c(17604, 17605, 17606, 17607, 
-        17609, 17610, 17611, 17612, 17613, 17614, 17615, 17616, 17617, 
-        17618, 17619, 17620, 17621, 17622, 17623, 17624, 17625, 17626, 
-        17628, 17629, 17630, 17631, 17632, 17633, 17634, 17635, 17636, 
-        17637, 17638, 17639, 17640, 17642, 17643, 17644, 17645, 17647, 
-        17648, 17649, 17650, 17651, 17604, 17605, 17606, 17607, 17609, 
-        17610, 17611, 17612, 17613, 17614, 17615, 17616, 17617, 17618, 
-        17619, 17620, 17621, 17622, 17623, 17624, 17625, 17626, 17628, 
-        17629, 17630, 17631, 17632, 17633, 17634, 17635, 17636, 17637, 
-        17638, 17639, 17640, 17642, 17643, 17644, 17645, 17647, 17648, 
-        17649, 17650, 17651, 17604, 17605, 17606, 17607, 17609, 17610, 
-        17611, 17612, 17613, 17614, 17615, 17616, 17617, 17618, 17619, 
-        17620, 17621, 17622, 17623, 17624, 17625, 17626, 17628, 17629, 
-        17630, 17631, 17632, 17633, 17634, 17635, 17636, 17637, 17638, 
-        17639, 17640, 17642, 17643, 17644, 17645, 17647, 17648, 17649, 
-        17650, 17651, 17604, 17605, 17606, 17607, 17609, 17610, 17611, 
-        17612, 17613, 17614, 17615, 17616, 17617, 17618, 17619, 17620, 
-        17621, 17622, 17623, 17624, 17625, 17626, 17628, 17629, 17630, 
-        17631, 17632, 17633, 17634, 17635, 17636, 17637, 17638, 17639, 
-        17640, 17642, 17643, 17644, 17645, 17647, 17648, 17649, 17650, 
-        17651, 17604, 17605, 17606, 17607, 17609, 17610, 17611, 17612, 
-        17613, 17614, 17615, 17616, 17617, 17618, 17619, 17620, 17621, 
-        17622, 17623, 17624, 17625, 17626, 17628, 17629, 17630, 17631, 
-        17632, 17633, 17634, 17635, 17636, 17637, 17638, 17639, 17640, 
-        17642, 17643, 17644, 17645, 17647, 17648, 17649, 17650, 17651
-        ), class = "Date"),
-    species = c(
-      "big_eared_fish", "big_eared_fish", 
-      "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", 
-      "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", 
-      "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", 
-      "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", 
-      "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", 
-      "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", 
-      "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", 
-      "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", 
-      "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", 
-      "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", 
-      "big_eared_fish", "big_eared_fish", "bigfoot", "bigfoot", "bigfoot", 
-      "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", 
-      "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", 
-      "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", 
-      "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", 
-      "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", 
-      "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", 
-      "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "long_nosed_bird", 
-      "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", 
-      "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", 
-      "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", 
-      "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", 
-      "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", 
-      "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", 
-      "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", 
-      "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", 
-      "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", 
-      "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", 
-      "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_toed_rat", 
-      "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", 
-      "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", 
-      "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", 
-      "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", 
-      "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", 
-      "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", 
-      "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", 
-      "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", 
-      "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", 
-      "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", 
-      "long_toed_rat", "long_toed_rat", "long_toed_rat", "thick_furred_rabbit", 
-      "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", 
-      "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", 
-      "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", 
-      "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", 
-      "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", 
-      "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", 
-      "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", 
-      "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", 
-      "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", 
-      "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", 
-      "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", 
-      "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", 
-      "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", 
-      "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", 
-      "thick_furred_rabbit"),
-    abundance = c(
-      5, 8, 11, 7, 11, 10, 11, 
-      10, 7, 9, 8, 6, 7, 7, 8, 10, 6, 6, 8, 5, 8, 5, 12, 6, 8, 8, 12, 
-      6, 9, 2, 7, 15, 7, 10, 7, 8, 5, 8, 6, 12, 6, 10, 4, 11, 1, 0, 
-      1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 
-      0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 
-      1, 2, 2, 1, 2, 3, 1, 1, 2, 2, 1, 1, 2, 3, 1, 1, 2, 3, 3, 1, 2, 
-      4, 2, 1, 2, 3, 1, 1, 2, 1, 1, 2, 1, 1, 3, 3, 3, 1, 1, 2, 2, 2, 
-      2, 1, 17, 10, 14, 4, 11, 10, 11, 7, 5, 8, 9, 9, 10, 11, 16, 6, 
-      8, 9, 12, 15, 13, 11, 10, 11, 4, 7, 9, 4, 8, 10, 7, 16, 11, 10, 
-      11, 16, 8, 7, 9, 15, 4, 8, 10, 12, 34, 34, 29, 37, 27, 34, 30, 
-      28, 30, 31, 31, 34, 24, 30, 33, 29, 27, 28, 34, 32, 21, 33, 32, 
-      34, 39, 33, 28, 24, 36, 26, 30, 34, 32, 39, 33, 25, 31, 31, 35, 
-      23, 33, 31, 27, 35)),
-  class = c("tbl_df", "tbl", "data.frame"),
-  row.names = c(NA, -220L),
-  spec = structure(
-    list(cols = list(date = structure(
-      list(format = ""),
-      class = c("collector_date", "collector")),
-      species = structure(list(), class = c("collector_character", "collector")),
-      abundance = structure(list(), class = c("collector_double", 
-                                              "collector"))),
-      default = structure(list(), class = c("collector_guess", "collector"))),
-    class = "col_spec")
+dat <- tibble(
+  date = as.Date(c("2018-03-14", "2018-03-15", "2018-03-16", "2018-03-17", "2018-03-19", "2018-03-20", "2018-03-21", "2018-03-22", "2018-03-23", "2018-03-24", "2018-03-25", "2018-03-26", "2018-03-27", "2018-03-28", "2018-03-29", "2018-03-30", "2018-03-31", "2018-04-01", "2018-04-02", "2018-04-03", "2018-04-04", "2018-04-05", "2018-04-07", "2018-04-08", "2018-04-09", "2018-04-10", "2018-04-11", "2018-04-12", "2018-04-13", "2018-04-14", "2018-04-15", "2018-04-16", "2018-04-17", "2018-04-18", "2018-04-19", "2018-04-21", "2018-04-22", "2018-04-23", "2018-04-24", "2018-04-26", "2018-04-27", "2018-04-28", "2018-04-29", "2018-04-30", "2018-03-14", "2018-03-15", "2018-03-16", "2018-03-17", "2018-03-19", "2018-03-20", "2018-03-21", "2018-03-22", "2018-03-23", "2018-03-24", "2018-03-25", "2018-03-26", "2018-03-27", "2018-03-28", "2018-03-29", "2018-03-30", "2018-03-31", "2018-04-01", "2018-04-02", "2018-04-03", "2018-04-04", "2018-04-05", "2018-04-07", "2018-04-08", "2018-04-09", "2018-04-10", "2018-04-11", "2018-04-12", "2018-04-13", "2018-04-14", "2018-04-15", "2018-04-16", "2018-04-17", "2018-04-18", "2018-04-19", "2018-04-21", "2018-04-22", "2018-04-23", "2018-04-24", "2018-04-26", "2018-04-27", "2018-04-28", "2018-04-29", "2018-04-30", "2018-03-14", "2018-03-15", "2018-03-16", "2018-03-17", "2018-03-19", "2018-03-20", "2018-03-21", "2018-03-22", "2018-03-23", "2018-03-24", "2018-03-25", "2018-03-26", "2018-03-27", "2018-03-28", "2018-03-29", "2018-03-30", "2018-03-31", "2018-04-01", "2018-04-02", "2018-04-03", "2018-04-04", "2018-04-05", "2018-04-07", "2018-04-08", "2018-04-09", "2018-04-10", "2018-04-11", "2018-04-12", "2018-04-13", "2018-04-14", "2018-04-15", "2018-04-16", "2018-04-17", "2018-04-18", "2018-04-19", "2018-04-21", "2018-04-22", "2018-04-23", "2018-04-24", "2018-04-26", "2018-04-27", "2018-04-28", "2018-04-29", "2018-04-30", "2018-03-14", "2018-03-15", "2018-03-16", "2018-03-17", "2018-03-19", "2018-03-20", "2018-03-21", "2018-03-22", "2018-03-23", "2018-03-24", "2018-03-25", "2018-03-26", "2018-03-27", "2018-03-28", "2018-03-29", "2018-03-30", "2018-03-31", "2018-04-01", "2018-04-02", "2018-04-03", "2018-04-04", "2018-04-05", "2018-04-07", "2018-04-08", "2018-04-09", "2018-04-10", "2018-04-11", "2018-04-12", "2018-04-13", "2018-04-14", "2018-04-15", "2018-04-16", "2018-04-17", "2018-04-18", "2018-04-19", "2018-04-21", "2018-04-22", "2018-04-23", "2018-04-24", "2018-04-26", "2018-04-27", "2018-04-28", "2018-04-29", "2018-04-30", "2018-03-14", "2018-03-15", "2018-03-16", "2018-03-17", "2018-03-19", "2018-03-20", "2018-03-21", "2018-03-22", "2018-03-23", "2018-03-24", "2018-03-25", "2018-03-26", "2018-03-27", "2018-03-28", "2018-03-29", "2018-03-30", "2018-03-31", "2018-04-01", "2018-04-02", "2018-04-03", "2018-04-04", "2018-04-05", "2018-04-07", "2018-04-08", "2018-04-09", "2018-04-10", "2018-04-11", "2018-04-12", "2018-04-13", "2018-04-14", "2018-04-15", "2018-04-16", "2018-04-17", "2018-04-18", "2018-04-19", "2018-04-21", "2018-04-22", "2018-04-23", "2018-04-24", "2018-04-26", "2018-04-27", "2018-04-28", "2018-04-29", "2018-04-30")),
+  species = c("big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "big_eared_fish", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "bigfoot", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_nosed_bird", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "long_toed_rat", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit", "thick_furred_rabbit"),
+  abundance = c(5, 8, 11, 7, 11, 10, 11, 10, 7, 9, 8, 6, 7, 7, 8, 10, 6, 6, 8, 5, 8, 5, 12, 6, 8, 8, 12, 6, 9, 2, 7, 15, 7, 10, 7, 8, 5, 8, 6, 12, 6, 10, 4, 11, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 2, 2, 1, 2, 3, 1, 1, 2, 2, 1, 1, 2, 3, 1, 1, 2, 3, 3, 1, 2, 4, 2, 1, 2, 3, 1, 1, 2, 1, 1, 2, 1, 1, 3, 3, 3, 1, 1, 2, 2, 2, 2, 1, 17, 10, 14, 4, 11, 10, 11, 7, 5, 8, 9, 9, 10, 11, 16, 6, 8, 9, 12, 15, 13, 11, 10, 11, 4, 7, 9, 4, 8, 10, 7, 16, 11, 10, 11, 16, 8, 7, 9, 15, 4, 8, 10, 12, 34, 34, 29, 37, 27, 34, 30, 28, 30, 31, 31, 34, 24, 30, 33, 29, 27, 28, 34, 32, 21, 33, 32, 34, 39, 33, 28, 24, 36, 26, 30, 34, 32, 39, 33, 25, 31, 31, 35, 23, 33, 31, 27, 35)
 )
 
 dat
@@ -184,7 +77,7 @@ all.equal(tbl, dat)
 
 ## It works. But good luck not getting any downvotes posting a question on Stack Overflow that would include this code though...
 
-## *** Removing as much as possible from the data before using dput()
+## *** Removing as much as possible from the data before using deparse::deparsec()
 
 ## Remember what our problem was:
 
@@ -221,19 +114,18 @@ min_tbl %>%
   group_by(species) %>%
   summarise(sum())
 
-## Yes. Good. So now, we can use dput() and it will not look as crazy.
+## Yes. Good. So now, we can use deparse::deparsec() and it will not look nearly as crazy.
 
-## Exercise: use dput() and reprex::reprex() to prepare a question ready to post on the RStudio Community forum.
+## Exercise: use deparse::deparsec() and reprex::reprex() to prepare a question ready to post on the RStudio Community forum.
 
 ## First run this in the console to get the output
 
-dput(min_tbl)
+deparse::deparsec(min_tbl)
 
-min_dat <- structure(
-  list(species = c("a", "a", "b", "b", "c", "c"),
-       abundance = c(5, 8, 1, 0, 1, 2)),
-  class = c("tbl_df", "tbl", "data.frame"),
-  row.names = c(NA, -6L), spec = structure(list(cols = list(date = structure(list(format = ""), class = c("collector_date", "collector")), species = structure(list(), class = c("collector_character", "collector")), abundance = structure(list(), class = c("collector_double", "collector"))), default = structure(list(), class = c("collector_guess", "collector"))), class = "col_spec"))
+min_dat <- tibble(
+  species = c("a", "a", "b", "b", "c", "c"),
+  abundance = c(5, 8, 1, 0, 1, 2)
+)
 
 min_dat
 
@@ -243,11 +135,10 @@ all.equal(min_tbl, min_dat)
 
 library(tidyverse)
 
-min_dat <- structure(
-  list(species = c("a", "a", "b", "b", "c", "c"),
-       abundance = c(5, 8, 1, 0, 1, 2)),
-  class = c("tbl_df", "tbl", "data.frame"),
-  row.names = c(NA, -6L), spec = structure(list(cols = list(date = structure(list(format = ""), class = c("collector_date", "collector")), species = structure(list(), class = c("collector_character", "collector")), abundance = structure(list(), class = c("collector_double", "collector"))), default = structure(list(), class = c("collector_guess", "collector"))), class = "col_spec"))
+min_dat <- tibble(
+  species = c("a", "a", "b", "b", "c", "c"),
+  abundance = c(5, 8, 1, 0, 1, 2)
+)
 
 min_dat %>%
   group_by(species) %>%
@@ -255,7 +146,7 @@ min_dat %>%
 
 ## Hooray. Now you can paste this directly into the RStudio Community forum or any other website which accepts markdown markup. For Stack Overflow, instead of reprex::reprex(), use reprex::reprex(venue = "so").
 
-## *** Creating data
+## *** Creating data from scratch
 
 ## You might want to simply create fake data instead of using bits of your actual data. Sometimes this is faster and simpler.
 
@@ -294,7 +185,13 @@ dat %>%
   group_by(species) %>%
   summarise(sum(abundance))
 
-## ** Anonymising data
+## or even nicer
+
+dat %>%
+  group_by(species) %>%
+  summarise(sum = sum(abundance))
+
+## *** Anonymising data
 
 ## Let's imagine now that our data contains sensitive information. This can be personal information, government data, etc. Or maybe we simply do not wish to make our data useable when we post it along with our paper or while we ask for help. We can anonymize the data ourselves as we just did by renaming the species ourselves. But when lots of data has to be anonymized, this can be very tedious. 
 
