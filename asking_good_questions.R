@@ -370,6 +370,8 @@ tbl_anonym <- tbl
 
 tbl_anonym$species %<>% anonymize(.algo = "crc32")
 
+tbl_anonym
+
 table(tbl$species)
 
 table(tbl_anonym$species)
