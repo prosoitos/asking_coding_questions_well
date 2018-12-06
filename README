@@ -42,3 +42,5 @@ Participants need to bring a laptop with: the latest R release[fn:1] and the lat
 [fn:1] Download R from https://cran.r-project.org/ and install it on your machine
 
 [fn:2] Install the tidyverse package by running install.packages("tidyverse") in R
+
+/Workshop available at https://github.com/prosoitos/asking_good_questions./
