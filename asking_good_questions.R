@@ -1,14 +1,13 @@
-## * Packages
+## ** Packages
 ## always a good practice to load all the packages at the top of a script
 
 library(tidyverse)
 library(magrittr)
-library(here)
 library(anonymizer)
 
 ## * Making a reproducible example
 
-tbl <- read_csv(here("data_long.csv"))
+tbl <- read_csv("data_long.csv")
 
 tbl
 
@@ -228,7 +227,11 @@ min_tbl <- tbl
 
 ## simplify the species names
 
-min_tbl$species <- rep(letters[1:5], each = 44)
+min_tbl$species %<>% as.factor()
+
+levels(min_tbl$species) <- letters[1:length(unique(min_tbl$species))]
+
+min_tbl$species %<>% as.character()
 
 min_tbl
 
@@ -324,8 +327,8 @@ dat
 ## Let's make sure this reproduces our problem
 
 dat %>%
-      group_by(species) %>%
-      summarise(sum())
+  group_by(species) %>%
+  summarise(sum())
 
 ## Good.
 
